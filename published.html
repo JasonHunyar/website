@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Published research | Jason Hunyar</title>
+<meta name="description" content="Links to where Jason Hunyar's reporting and research on surveillance technology has been published.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Optional: save RuneScape UF (by nayfan) as fonts/runescape-uf.ttf for the task panel's pixel look. */
+  @font-face {
+    font-family: "RuneScape UF";
+    src: local("RuneScape UF"), local("RuneScape UF Regular"),
+         url("fonts/runescape-uf.woff2") format("woff2"),
+         url("fonts/runescape-uf.ttf") format("truetype");
+    font-display: swap;
+  }
+  :root {
+    --tan: #c0a886;
+    --tan-dark: #a88f6c;
+    --parchment: #e2dbc8;
+    --cream: #fcf5ec;
+    --edge: #d4c8ae;
+    --link: #8c5a2b;
+    --link-hover: #5e3a15;
+    --green: #5b9a2e;
+    --ink: #1b1710;
+    --serif: "PT Serif", Palatino, Georgia, serif;
+    --sans: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--tan);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { color: var(--link-hover); text-decoration: underline; }
+
+  .layout { display: flex; min-height: 100vh; }
+
+  /* left rail */
+  .rail {
+    width: 190px; flex-shrink: 0;
+    padding: 22px 16px 30px;
+    background: var(--tan);
+    font-size: 13px;
+  }
+  .rail .site {
+    font-family: var(--serif); font-weight: 700; font-size: 22px; line-height: 1.15;
+    color: #3b2a14; margin-bottom: 18px; padding-bottom: 12px;
+    border-bottom: 1px solid rgba(59,42,20,.25);
+  }
+  .rail .site small { display: block; font-family: var(--sans); font-weight: 400; font-size: 12px; margin-top: 4px; color: #4a3a22; }
+  .rail h3 { margin: 18px 0 6px; font-size: 13px; font-weight: 600; color: #3b2a14; }
+  .rail ul { list-style: none; margin: 0; padding: 0; }
+  .rail li { padding: 2px 0; }
+  .rail a { color: #4a3a22; }
+  .rail a:hover { color: #000; }
+
+  .rest { flex: 1; min-width: 0; }
+
+  /* tab strip */
+  .tabs {
+    display: flex; gap: 2px; padding: 22px 0 0 12px; height: 66px; align-items: flex-end;
+    background: var(--tan);
+  }
+  .tab {
+    padding: 8px 16px; font-size: 14px;
+    background: #b79f7d; color: #3b2a14;
+  }
+  .tab.on { background: var(--parchment); color: var(--ink); }
+  .tab:hover { text-decoration: none; background: #cbb593; }
+  .tab.on:hover { background: var(--parchment); }
+
+  main {
+    background: var(--parchment);
+    padding: 28px 36px 40px;
+  }
+  .inner { max-width: 900px; margin: 0 auto; }
+
+  h1, h2 { font-family: var(--serif); font-weight: 700; color: #000; }
+  h1 { font-size: 38px; line-height: 1.15; margin: 0 0 14px; padding-bottom: 6px; border-bottom: 1px solid #b6a98a; }
+  h2 { font-size: 26px; margin: 34px 0 12px; padding-bottom: 4px; border-bottom: 1px solid #b6a98a; }
+
+  .lead { font-size: 17px; margin: 0 0 12px; }
+
+  /* infobox, modeled on the wiki's item infoboxes */
+  .infobox {
+    float: right;
+    width: 300px;
+    margin: 4px 0 14px 24px;
+    background: #dacdb2;
+    border: 1px solid #a6926f;
+    font-size: 14px;
+  }
+  .infobox .ib-title {
+    background: #b8a07e; color: #000; text-align: center;
+    font-weight: 700; font-size: 16px; padding: 8px 6px;
+    border-bottom: 1px solid #a6926f;
+  }
+  .infobox .ib-head {
+    background: #b8a07e; color: #000; text-align: center;
+    font-weight: 700; padding: 6px;
+    border-top: 1px solid #a6926f; border-bottom: 1px solid #a6926f;
+  }
+  .infobox .pic {
+    width: 170px; aspect-ratio: 1 / 1; margin: 14px auto;
+    background: #d2c4a5; border: 1px dashed #9c8b66;
+    display: flex; align-items: center; justify-content: center; text-align: center; color: #6b5d3f;
+  }
+  .infobox .avatar { display: block; width: 180px; max-width: 70%; height: auto; margin: 14px auto; }
+  .infobox table { width: 100%; border-collapse: collapse; margin: 4px 0; }
+  .infobox th {
+    width: 36%; text-align: right; vertical-align: top;
+    font-weight: 700; color: #8b5e34;
+    padding: 6px 12px 6px 8px;
+    border-right: 2px solid #bfae8c;
+  }
+  .infobox td { padding: 6px 10px; vertical-align: top; color: #000; }
+  .infobox .btn-row { text-align: center; padding: 8px 0 14px; }
+  .infobox .btn {
+    display: inline-block;
+    background: #cdbd9d; color: #000;
+    border: 1px solid #9c8864; border-radius: 3px;
+    padding: 5px 14px; font-weight: 700; font-size: 13px;
+  }
+  .infobox .btn:hover { background: #dccfb2; color: #000; text-decoration: none; }
+
+  .callout {
+    background: var(--cream);
+    border: 1px solid var(--edge);
+    border-left: 6px solid var(--green);
+    padding: 14px 18px;
+    margin: 18px 0;
+  }
+  .callout h3 { margin: 0 0 6px; font-family: var(--serif); font-size: 19px; }
+  .callout p { margin: 0; }
+
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; clear: both; }
+  .card {
+    background: var(--cream);
+    border: 1px solid var(--edge);
+    display: flex; flex-direction: column;
+  }
+  .card .band {
+    height: 96px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--serif); font-weight: 700; font-size: 52px; color: #5e3a15;
+    background: #c9b793;
+    border-bottom: 1px solid var(--edge);
+  }
+  .card .txt { padding: 14px 16px 16px; display: flex; flex-direction: column; flex: 1; }
+  .card .meta { font-size: 12.5px; color: #5c5441; margin-bottom: 4px; }
+  .card h3 { margin: 0 0 8px; font-family: var(--serif); font-size: 19px; line-height: 1.25; }
+  .card h3 a { color: #000; }
+  .card h3 a:hover { color: var(--link); }
+  .card p { margin: 0 0 10px; font-size: 14px; flex: 1; }
+  .card .more { font-weight: 600; font-size: 14px; }
+
+  /* section headings start below the infobox instead of squeezing beside it */
+  #recent, #stories { clear: both; }
+
+  /* featured card for the newest story */
+  .cards.single { grid-template-columns: 1fr; }
+  .cards.single .card { flex-direction: row; border-left: 6px solid var(--green); }
+  .cards.single .card .band {
+    width: 190px; height: auto; flex-shrink: 0;
+    border-bottom: none; border-right: 1px solid var(--edge);
+    font-size: 44px;
+  }
+  .cards.single .card .txt { padding: 26px 30px; justify-content: center; }
+  .cards.single .card .meta { font-size: 14px; margin-bottom: 8px; }
+  .cards.single .card h3 { font-size: 32px; line-height: 1.2; margin-bottom: 14px; }
+  .cards.single .card p { font-size: 19px; line-height: 1.5; flex: 0 0 auto; margin-bottom: 16px; }
+  .cards.single .card .more { font-size: 16px; }
+
+  /* research log: modeled on a game task-list window */
+  .ui {
+    max-width: 720px;
+    background: #4d453a;
+    border: 4px solid; border-color: #8a7d66 #2b241b #2b241b #8a7d66;
+    color: #e9e3d3; font-family: "RuneScape UF", var(--sans); font-size: 15px; clear: both;
+  }
+  .ui-title {
+    position: relative; text-align: center;
+    background: #3a3228; color: #ff981f; font-weight: 700; font-size: 18px;
+    padding: 9px 44px; text-shadow: 1px 1px 0 #000; border-bottom: 2px solid #2b241b;
+  }
+  .ui-btn {
+    position: absolute; top: 6px; width: 28px; height: 28px;
+    display: flex; align-items: center; justify-content: center;
+    border: 2px solid; border-color: #8a7d66 #1c1813 #1c1813 #8a7d66;
+    background: #4a4034; color: #d9d3c4; font-size: 16px; line-height: 1; text-shadow: none;
+  }
+  .ui-btn.l { left: 8px; }
+  .ui-btn.r { right: 8px; }
+  .ui-bar {
+    position: relative; height: 32px; margin: 10px 10px 8px; overflow: hidden;
+    background: #2a2620; border: 2px solid; border-color: #1c1813 #6e6350 #6e6350 #1c1813;
+  }
+  .ui-fill { position: absolute; left: 0; top: 0; bottom: 0; width: 100%; background: #1f9a45; transition: width .25s; }
+  .ui-bar-text { position: relative; text-align: center; line-height: 28px; color: #fff; text-shadow: 1px 1px 0 #000; font-weight: 600; }
+  .ui-body { display: flex; padding: 0 10px 10px; }
+  .ui-filters {
+    width: 170px; flex-shrink: 0; padding: 10px 12px 14px;
+    background: #4a4236; border: 2px solid #2b241b; border-right: none;
+  }
+  .ui-ft { text-align: center; font-weight: 700; color: #ff981f; font-size: 17px; margin-bottom: 6px; text-shadow: 1px 1px 0 #000; }
+  .ui-filters label { display: block; color: #ff981f; font-weight: 700; margin: 14px 0 4px; text-shadow: 1px 1px 0 #000; }
+  .ui-filters select {
+    -webkit-appearance: none; appearance: none;
+    width: 100%; font: inherit; font-size: 13px; color: #fff; text-align: center; cursor: pointer;
+    background: #6b6050 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5z' fill='%23d9d3c4' stroke='%231c1813'/%3E%3C/svg%3E") no-repeat right 6px center;
+    border: 2px solid; border-color: #8a7d66 #2b241b #2b241b #8a7d66;
+    padding: 4px 24px 4px 6px; border-radius: 0;
+  }
+  .ui-list {
+    flex: 1; min-width: 0; max-height: 330px; overflow-y: auto;
+    border: 2px solid #2b241b; background: #5f5646;
+    scrollbar-color: #8a7d66 #2f2a22;
+  }
+  .ui-list::-webkit-scrollbar { width: 18px; }
+  .ui-list::-webkit-scrollbar-track { background: #2f2a22; border-left: 2px solid #1c1813; }
+  .ui-list::-webkit-scrollbar-thumb { background: #8a7d66; border: 2px solid; border-color: #b3a68e #4a4034 #4a4034 #b3a68e; }
+  .task { border-bottom: 1px solid #3f382d; }
+  .task:nth-child(odd) { background: #6c6250; }
+  .task[hidden] { display: none; }
+  .task summary {
+    list-style: none; cursor: pointer; display: flex; flex-direction: column;
+    padding: 8px 10px 8px 78px; position: relative; min-height: 50px; justify-content: center;
+  }
+  .task summary::-webkit-details-marker { display: none; }
+  .task summary::before {
+    content: "+"; position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+    width: 22px; text-align: center; line-height: 1;
+    color: #ffb84d; font-weight: 900; font-size: 26px; text-shadow: 1px 1px 0 #000;
+  }
+  .task[open] summary::before { content: "\2212"; }
+  .task summary::after {
+    content: ""; position: absolute; left: 42px; top: 50%; transform: translateY(-50%);
+    width: 26px; height: 26px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 26 26'%3E%3Ccircle cx='11' cy='11' r='6.5' fill='%23a9b4bf' stroke='%232b241b' stroke-width='2'/%3E%3Cpath d='M16 16l7 7' stroke='%232b241b' stroke-width='5' stroke-linecap='round'/%3E%3Cpath d='M16 16l7 7' stroke='%23b9955a' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center / contain;
+  }
+  .task summary:hover { background: rgba(255,255,255,.07); }
+  .t-name { color: #d9d3c4; font-size: 17px; font-weight: 600; text-shadow: 1px 1px 0 #000; }
+  .t-sub { font-size: 13px; color: #fff; text-shadow: 1px 1px 0 #000; }
+  .task b { color: #ff981f; font-weight: 700; }
+  .t-detail { padding: 2px 14px 12px 14px; font-size: 13px; line-height: 1.5; color: #f1ecdc; }
+  .t-detail div { margin-top: 3px; }
+
+  footer {
+    background: var(--tan);
+    padding: 16px 36px 24px;
+    font-size: 12.5px; color: #3b2a14;
+  }
+  footer .inner { text-align: left; }
+
+  @media (max-width: 860px) {
+    .layout { flex-direction: column; }
+    .rail { width: 100%; padding: 14px 16px; }
+    .rail .site { margin-bottom: 8px; padding-bottom: 8px; }
+    .tabs { padding-left: 8px; }
+    main { padding: 22px 16px 32px; }
+    .infobox { float: none; width: 100%; margin: 14px 0; }
+    .cards { grid-template-columns: 1fr; }
+    .cards.single .card { flex-direction: column; }
+    .cards.single .card .band { width: 100%; height: 70px; border-right: none; border-bottom: 1px solid var(--edge); }
+    .cards.single .card { border-left: 1px solid var(--edge); border-top: 6px solid var(--green); }
+    .cards.single .card .txt { padding: 18px 16px; }
+    .cards.single .card h3 { font-size: 24px; }
+    .cards.single .card p { font-size: 17px; }
+    h1 { font-size: 30px; }
+    .ui-body { flex-direction: column; }
+    .ui-filters { width: 100%; border-right: 2px solid #2b241b; border-bottom: none; }
+    footer { padding: 14px 16px 22px; }
+  }
+
+  /* published-work table, styled like a wiki table */
+  .pub-table { width: 100%; border-collapse: collapse; background: var(--cream); border: 1px solid #b6a98a; margin: 8px 0 6px; }
+  .pub-table th {
+    background: #c9b690; color: #2a1d0c; text-align: left; font-weight: 600;
+    padding: 8px 12px; border-bottom: 1px solid #b6a98a;
+  }
+  .pub-table td { padding: 11px 12px; vertical-align: top; border-top: 1px solid var(--edge); }
+  .pub-table tbody tr:first-child td { border-top: none; }
+  .pub-table tbody tr:nth-child(even) { background: #f4ecdd; }
+  .pub-table .date { white-space: nowrap; width: 128px; color: #5c5441; font-size: 14px; }
+  .pub-table .pub { width: 150px; font-weight: 600; color: #5e3a15; }
+  .pub-table .title a { font-family: var(--serif); font-weight: 700; font-size: 17px; color: #000; }
+  .pub-table .title a:hover { color: var(--link); }
+  @media (max-width: 700px) {
+    .pub-table thead { display: none; }
+    .pub-table, .pub-table tbody, .pub-table tr, .pub-table td { display: block; width: auto; }
+    .pub-table tr { padding: 10px 12px; border-top: 1px solid var(--edge); }
+    .pub-table tbody tr:first-child { border-top: none; }
+    .pub-table td { padding: 1px 0; border: none; }
+    .pub-table .date, .pub-table .pub { width: auto; display: inline-block; margin-right: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <aside class="rail">
+    <div class="site">Jason Hunyar<small>FOIA Around And Find Out</small></div>
+
+    <h3>Navigation</h3>
+    <ul>
+      <li><a href="index.html">Profile</a></li>
+      <li><a href="#top">Published research</a></li>
+      <li><a href="index.html#research">Research log</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+
+    <h3>Elsewhere</h3>
+    <ul>
+      <li><a href="https://jasonhunyar.substack.com/">SubStack</a></li>
+      <li><a href="https://jasonhunyar.substack.com/archive">All stories</a></li>
+      <li><a href="https://jasonhunyar.substack.com/subscribe">Subscribe</a></li>
+    </ul>
+
+    <h3>Secure tips</h3>
+    <ul>
+      <li>Signal: Jason.967</li>
+    </ul>
+  </aside>
+
+  <div class="rest" id="top">
+
+    <nav class="tabs" aria-label="Page sections">
+      <a class="tab" href="index.html">Profile</a>
+      <a class="tab on" href="#top">Published research</a>
+      <a class="tab" href="index.html#contact">Contact</a>
+    </nav>
+
+    <main>
+      <div class="inner">
+
+        <h1>Published research</h1>
+        <p class="lead">Outside publications that have published or covered my research on surveillance technology.</p>
+
+        <table class="pub-table">
+        <thead><tr><th>Date</th><th>Publication</th><th>Headline</th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="date">25 October 2026</td>
+            <td class="pub">Benn Jordan (YouTube)</td>
+            <td class="title"><a href="https://www.youtube.com/watch?v=OP5GDiLZ1Nw&amp;t=913s">Flock Fever: A Review of Government Surveillance</a></td>
+          </tr>
+          <tr>
+            <td class="date">17 September 2026</td>
+            <td class="pub">404 Media</td>
+            <td class="title"><a href="https://www.404media.co/flock-city-pd-the-fake-flock-owned-police-department-that-searched-real-cameras-for-real-people/">‘Flock City PD:’ The Fake Flock-Owned ‘Police Department’ That Searched Real Cameras for Real People</a></td>
+          </tr>
+          <tr>
+            <td class="date">4 September 2026</td>
+            <td class="pub">The Intercept</td>
+            <td class="title"><a href="https://theintercept.com/2026/09/04/flock-camera-surveillance-protest-donations/">Flock Donations to Local Politicians’ Groups Skyrocket as Protests Against AI Cameras Mount</a></td>
+          </tr>
+          <tr>
+            <td class="date">28 August 2026</td>
+            <td class="pub">WSB-TV</td>
+            <td class="title"><a href="https://www.wsbtv.com/news/local/man-questions-who-can-access-flock-cameras-what-open-record-searches-reveal/32XOTQWJ6BFRLO25NG355TY7II/">17 million searches of Flock cameras in one metro city. Most of them were out of state</a></td>
+          </tr>
+          <tr>
+            <td class="date">17 August 2026</td>
+            <td class="pub">Forbes</td>
+            <td class="title"><a href="https://www.forbes.com/sites/maryroeloffs/2026/08/17/have-i-been-flocked-researcher-says-over-400-illinois-agencies-have-surveillance-network-access/">‘Have I Been Flocked’ Researcher Says Over 400 Illinois Agencies Have Surveillance Network Access</a></td>
+          </tr>
+          <tr>
+            <td class="date">7 August 2026</td>
+            <td class="pub">404 Media</td>
+            <td class="title"><a href="https://www.404media.co/flock-pitched-a-plan-to-turn-uber-and-lyft-drivers-into-roaming-surveillance-vehicles/">Flock Pitched a Plan To Turn Uber and Lyft Drivers Into Roaming Surveillance Vehicles</a></td>
+          </tr>
+          <tr>
+            <td class="date">23 July 2026</td>
+            <td class="pub">404 Media</td>
+            <td class="title"><a href="https://www.404media.co/flocks-ceo-says-its-alprs-dont-do-video-after-repeatedly-announcing-they-can/">Flock's CEO Says its ALPRs Don't Do Video After Repeatedly Announcing They Can</a></td>
+          </tr>
+          <tr>
+            <td class="date">18 May 2026</td>
+            <td class="pub">InvestigateTV</td>
+            <td class="title"><a href="https://www.investigatetv.com/2026/05/18/flock-safety-cameras-help-solve-crimes-whos-watching-watchers/">Flock Safety cameras help solve crimes. But who's watching the watchers?</a></td>
+          </tr>
+          <tr>
+            <td class="date">14 May 2026</td>
+            <td class="pub">IPVM</td>
+            <td class="title"><a href="https://ipvm.com/reports/flock-review-dunwoody">City and Flock Manipulate Security Scores (Public Report)</a></td>
+          </tr>
+          <tr>
+            <td class="date">30 April 2026</td>
+            <td class="pub">404 Media</td>
+            <td class="title"><a href="https://www.404media.co/city-learns-flock-accessed-cameras-in-childrens-gymnastics-room-as-a-sales-pitch-demo-renews-contract-anyway/">City Learns Flock Accessed Cameras in Children's Gymnastics Room as a Sales Pitch Demo, Renews Contract Anyway</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="inner">
+        &copy; 2026 Jason Hunyar &bull; All opinions are the author's &bull; Claims are based on records obtained through official channels<br>
+        Fan-made styling. Not affiliated with or endorsed by Jagex, Old School RuneScape, or the OSRS Wiki.
+      </div>
+    </footer>
+
+  </div>
+</div>
+</body>
+</html>
